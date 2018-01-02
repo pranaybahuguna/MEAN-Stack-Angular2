@@ -16,7 +16,7 @@ module.exports = (router) => {
                        username : req.body.username.toLowerCase(),
                        password : req.body.password
                     });
-                    user.save((err) =>{
+                    user.save((err) => {
                         if(err){
                             if(err.code === 11000){
                                 res.json({success: false, message : 'User already exists'});
